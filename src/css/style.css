@@ -1,0 +1,129 @@
+
+header{
+    
+    text-align: center;
+    background-repeat: no-repeat ;
+    background-size: cover;
+    background-image: url('/images/fundao2.png ') ;
+
+}
+
+
+body{
+    
+    margin: 0 auto;
+    /* background-color: rgb(216, 219, 221);*/
+ 
+}
+
+
+.container-fluid{
+    background-size: 2000px;
+    max-width: 2000px;
+    margin-top: 50px;
+}
+
+header img{
+    width: 600px;
+    height: auto;
+    margin-bottom: 10px;
+ 
+}
+
+.redes-sociais {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    display: flex;
+    gap: 50px;
+}
+
+
+.redes-sociais img {
+    width: 55px;
+    height: 55px;
+    filter: brightness(0) invert(1);
+    transition: transform 1s;
+}
+
+.redes-sociais img:hover {
+    transform: scale(1.15);
+}
+
+.carousel{
+    margin-top: 15PX;
+    margin-bottom: 170px;
+    width: auto;
+}
+
+.card img{
+    border-radius: 0%;
+    margin-left: 80px;
+}
+
+.card p{
+    text-align: center;
+}
+
+.card h5{
+    text-align: center;
+}
+
+.card{
+    background-color: rgb(169, 169, 169);
+    box-shadow: 10px 60px rgba(0, 0, 0 ,0);
+    margin-top: 50px;
+    color: #fff;
+
+}
+
+
+
+.text-cima p{
+    text-align: center;
+    margin-top: 50px;
+    background-color: rgb(128, 128, 132);
+
+}
+
+.card-header{
+     background-color: #0f2c3f;
+}
+
+footer {
+   background-image: url('/images/fundao2.png ');
+   color: #fff;
+   text-align: center;
+   padding: 30px 30px;
+  
+  
+}
+
+.produto ul{
+    list-style: square;
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+
+.carousel-inner img{
+    max-height:950px;
+    width: auto;
+    height: auto;
+
+}
+
+.card-mini{
+    background-color: rgb(248, 248, 248);
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    margin-top: 10px;
+    
+
+}
+.card-mini p{
+    text-align: center;
+}
+
+
