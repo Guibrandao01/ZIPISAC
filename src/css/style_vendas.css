@@ -1,13 +1,14 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
 
 body {
     font-family: 'Arial', sans-serif;
     background-color: white;
     color: #333;
+    margin: auto;
 }
 
 header {
@@ -15,11 +16,11 @@ header {
     background-repeat: no-repeat ;
     background-size: cover;
     background-image: url('/images/fundao2.png ') ;
-  
+
 }
 
 header .logo {
-    
+
     align-items: center;
     gap: 10px;
 }
@@ -66,7 +67,13 @@ main {
 
 .gallery {
     flex: 1;
+    margin-top: 50px;
 }
+
+.gallery h5{
+    margin-bottom: 30px;
+}
+
 
 .gallery .main-image {
     width: 100%;
@@ -74,10 +81,20 @@ main {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.thumbnail-row {
-    display: flex;
-    gap: 20px;
-    margin-top: 100px;
+.thumbnail-row img {
+    width: 150px; /* Ajuste conforme necessário */
+    height: auto;
+    margin: 5px;
+    border-radius: 8px; /* opcional para bordas arredondadas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.thumbnail-row img:hover {
+    transform: scale(1.5); /* Aumenta 20% no hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* sombra para destacar */
+    z-index: 10;
+    position: relative; /* garante que a imagem fique acima */
 }
 
 .thumbnail-row img {
@@ -87,7 +104,7 @@ main {
     border: 2px solid #ccc;
     border-radius: 5px;
     cursor: pointer;
-    transition: border-color 0.3s;  
+    transition: border-color 0.3s;
 }
 
 .thumbnail-row img:hover {
@@ -102,9 +119,25 @@ main {
     flex: 1;
 }
 
+.gallery ul{
+    margin-left: 3%;
+}
+
+.gallery h5{
+    text-align: center;
+    font-size: 30px
+}
+
+.thumbnail-row{
+    margin-left: 3%;
+
+}
+
 .product-info h1 {
     color: #222;
     margin-bottom: 15px;
+    margin-left: 20px;
+
 }
 
 .product-info p {
@@ -112,10 +145,30 @@ main {
     line-height: 1.5;
 }
 
-.product-info .group-image {
-    width: 100%;
-    margin: 15px 0;
-    border-radius: 5px;
+.product-info {
+    margin-top: 40px;
+    border: 1px solid black;
+    min-height: 400px;
+
+}
+
+.group-image {
+   display: flex;
+    width: 400px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+
+}
+
+.group-image:hover {
+    transform: scale(1.0); /* Zoom ao passar o mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 10;
+
 }
 
 .product-info ul {
@@ -128,6 +181,10 @@ main {
     margin-bottom: 8px;
 }
 
+.gallery{
+     border: 1px solid black
+}
+
 
 footer {
    background-image: url('/images/fundao2.png ');
@@ -135,5 +192,42 @@ footer {
    text-align: center;
    padding: 30px 30px;
    margin-top: 360px;
-   
+
+}
+
+.img_center{
+     display: flex;
+    flex-direction: column; /* Coloca os elementos em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    text-align: center;
+
+}
+.btn_center{
+    display: flex;
+    flex-direction: column; /* Coloca os elementos em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    text-align: center;
+}
+
+.btn-whatsapp {
+    background-color: #046628; /* Verde WhatsApp */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin-top: 20px; /* Espaço abaixo da imagem */
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.btn-whatsapp:hover {
+    background-color: #068133;
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
