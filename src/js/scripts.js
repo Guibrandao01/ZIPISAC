@@ -12,14 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (produtoDiv) {
                 const nomeProduto = produtoDiv.querySelector('#frase')?.innerText.trim();
                 const detalhesProduto = produtoDiv.querySelector('#detalhes')?.innerText.trim();
-                const valorProduto = produtoDiv.querySelector('#preco')?.innerText.trim();
+                // const valorProduto = produtoDiv.querySelector('#preco')?.innerText.trim();
 
                 const nome = encodeURIComponent(nomeProduto || '');
                 const detalhes = encodeURIComponent(detalhesProduto || '');
-                const preco = encodeURIComponent(valorProduto || '');
+                // const preco = encodeURIComponent(valorProduto || '');
 
                 // Abre a página com os parâmetros
-                window.open(`vendas.html?nome=${nome}&detalhes=${detalhes}&preco=${preco}`, '_blank');
+                window.open(`vendas.html?nome=${nome}&detalhes=${detalhes}`, '_blank');
             }
         });
     });
@@ -30,13 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (container) {
         const nome = decodeURIComponent(getParametro('nome') || '');
         const detalhes = decodeURIComponent(getParametro('detalhes') || '');
-        const preco = decodeURIComponent(getParametro('preco') || '');
+        // const preco = decodeURIComponent(getParametro('preco') || '');
 
-        if (nome && detalhes && preco) {
+        if (nome && detalhes) {
             container.innerHTML = `
                 <h2>${nome}</h2>
                 <p>${detalhes}</p>
-                <p>${preco}</p>
             `;
         } else {
             container.innerHTML = `<p>Nenhum produto foi selecionado.</p>`;
